@@ -1,12 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://hvg3s5w7ybvu"]
+[gd_scene load_steps=3 format=3 uid="uid://hvg3s5w7ybvu"]
 
 [ext_resource type="Script" uid="uid://bx86iiaiiee6p" path="res://main.gd" id="1_ig7tw"]
 
-[node name="Main" type="Control"]
-layout_mode = 3
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
+bg_color = Color(0.0313726, 0.0313726, 0.0431373, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[node name="Main" type="ScrollContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ig7tw")
+horizontal_scroll_mode = 0
 script = ExtResource("1_ig7tw")
+
+[node name="List" type="VBoxContainer" parent="."]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="BundleSelector" type="OptionButton" parent="List"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="BundleTitle" type="Label" parent="List"]
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="BundleAuthor" type="Label" parent="List"]
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="BundleDescription" type="Label" parent="List"]
+layout_mode = 2
+autowrap_mode = 2
+
+[connection signal="item_selected" from="List/BundleSelector" to="." method="_change_to_bundle"]

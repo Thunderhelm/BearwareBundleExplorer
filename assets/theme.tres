@@ -1,0 +1,109 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://cxq38wk7w6ors"]
+
+[ext_resource type="FontFile" uid="uid://bhrhs6tyojaxu" path="res://assets/fonts/Hack-Bold.ttf" id="1_5x3i2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y61vb"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.945098, 0.764706, 0.196078, 1)
+corner_radius_top_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5x3i2"]
+content_margin_left = 10.0
+bg_color = Color(0.945098, 0.764706, 0.196078, 1)
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.945098, 0.764706, 0.196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lu33j"]
+content_margin_left = 10.0
+bg_color = Color(0.945098, 0.764706, 0.196078, 1)
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.945098, 0.764706, 0.196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wycmq"]
+content_margin_left = 10.0
+bg_color = Color(0.945098, 0.764706, 0.196078, 1)
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.945098, 0.764706, 0.196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2pqw"]
+content_margin_left = 10.0
+bg_color = Color(0.95, 0.774883, 0.1995, 0.105882)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.945098, 0.764706, 0.196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8htd"]
+content_margin_left = 10.0
+bg_color = Color(0.945098, 0.764706, 0.196078, 1)
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.945098, 0.764706, 0.196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl1kw"]
+content_margin_left = 10.0
+bg_color = Color(0.945098, 0.764706, 0.196078, 1)
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.945098, 0.764706, 0.196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wms38"]
+content_margin_left = 10.0
+bg_color = Color(0.945098, 0.764706, 0.196078, 1)
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.945098, 0.764706, 0.196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bcf2e"]
+content_margin_left = 10.0
+bg_color = Color(0.945098, 0.764706, 0.196078, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0313726, 0.0313726, 0.0431373, 1)
+
+[resource]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/styles/normal = SubResource("StyleBoxFlat_y61vb")
+OptionButton/colors/font_color = Color(0.945098, 0.764706, 0.196078, 1)
+OptionButton/colors/font_focus_color = Color(0.945098, 0.764706, 0.196078, 1)
+OptionButton/colors/font_hover_color = Color(0.945098, 0.764706, 0.196078, 1)
+OptionButton/colors/font_hover_pressed_color = Color(0.945098, 0.764706, 0.196078, 1)
+OptionButton/colors/font_pressed_color = Color(0, 0, 0, 1)
+OptionButton/fonts/font = ExtResource("1_5x3i2")
+OptionButton/styles/disabled = SubResource("StyleBoxFlat_5x3i2")
+OptionButton/styles/disabled_mirrored = SubResource("StyleBoxFlat_lu33j")
+OptionButton/styles/focus = SubResource("StyleBoxFlat_wycmq")
+OptionButton/styles/hover = SubResource("StyleBoxFlat_x2pqw")
+OptionButton/styles/hover_mirrored = SubResource("StyleBoxFlat_e8htd")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_wl1kw")
+OptionButton/styles/normal_mirrored = SubResource("StyleBoxFlat_wms38")
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_bcf2e")

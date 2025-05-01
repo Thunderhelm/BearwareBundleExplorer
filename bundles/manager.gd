@@ -12,6 +12,14 @@ var unique_name_map: Dictionary[String, BundleNode] = {}
 
 
 
+func get_bundles() -> Array[BundleRoot]:
+	var result: Array[BundleRoot] = []
+	for child in get_children():
+		if child is BundleRoot:
+			result.append(child)
+	return result
+
+
 func load_bundles() -> void:
 	for path in bundle_paths:
 		load_bundles_from_path(path)

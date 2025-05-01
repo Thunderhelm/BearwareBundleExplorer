@@ -11,13 +11,30 @@ config_version=5
 [application]
 
 config/name="Bearware Bundle Explorer"
+config/version="0.1"
 run/main_scene="uid://hvg3s5w7ybvu"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+run/low_processor_mode=true
+boot_splash/bg_color=Color(0.945098, 0.764706, 0.196078, 1)
+boot_splash/image="uid://bwxgx025fxfdk"
 config/icon="res://icon.svg"
 
 [autoload]
 
 BundleManager="*res://bundles/manager.gd"
+
+[debug]
+
+file_logging/enable_file_logging=true
+
+[display]
+
+window/size/viewport_width=500
+window/size/viewport_height=700
+window/subwindows/embed_subwindows=false
+window/stretch/aspect="ignore"
+window/handheld/orientation=1
+window/vsync/vsync_mode=0
 
 [dotnet]
 
@@ -27,7 +44,20 @@ project/assembly_name="New Game Project"
 
 enabled=PackedStringArray()
 
+[gui]
+
+theme/custom="uid://cxq38wk7w6ors"
+theme/custom_font="uid://c32bf262cfbad"
+
+[physics]
+
+common/physics_ticks_per_second=1
+common/max_physics_steps_per_frame=1
+2d/physics_engine="Dummy"
+3d/physics_engine="Dummy"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.0328209, 0.03282, 0.0437259, 1)
