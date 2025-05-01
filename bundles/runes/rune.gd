@@ -1,0 +1,2 @@
+class_name BundleRune
+extends BundleNode
