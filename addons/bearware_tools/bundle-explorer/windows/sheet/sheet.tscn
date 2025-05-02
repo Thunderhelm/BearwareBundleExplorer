@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0ei8mni4m2fg"]
+
+[ext_resource type="Theme" uid="uid://cxq38wk7w6ors" path="res://addons/bearware_tools/bundle-explorer/assets/theme.tres" id="1_73di2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3flh"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+bg_color = Color(0.945098, 0.764706, 0.196078, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68b5o"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.945098, 0.764706, 0.196078, 1)
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqv5q"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.945098, 0.764706, 0.196078, 1)
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_detail = 1
+anti_aliasing = false
+
+[node name="Sheet" type="Button"]
+theme = ExtResource("1_73di2")
+text = "Could not get sheet name"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_left = 3.0
+offset_top = -22.0
+offset_right = 58.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3flh")
+text = "SHEET"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Window" type="Window" parent="."]
+position = Vector2i(150, 36)
+size = Vector2i(300, 700)
+
+[node name="MarginContainer" type="MarginContainer" parent="Window"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_68b5o")
+text = "SHEET:"
+
+[node name="Label2" type="Label" parent="Window/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_qqv5q")

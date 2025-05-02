@@ -16,6 +16,7 @@ border_color = Color(0.945098, 0.764706, 0.196078, 1)
 corner_radius_top_left = 3
 corner_radius_bottom_right = 3
 corner_detail = 1
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbrxv"]
 content_margin_left = 10.0
@@ -31,6 +32,7 @@ border_color = Color(0.945098, 0.764706, 0.196078, 1)
 corner_radius_top_left = 3
 corner_radius_bottom_right = 3
 corner_detail = 1
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldogx"]
 content_margin_left = 10.0
@@ -45,6 +47,7 @@ border_color = Color(0.945098, 0.764706, 0.196078, 1)
 corner_radius_top_left = 3
 corner_radius_bottom_right = 3
 corner_detail = 1
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1baen"]
 content_margin_left = 7.0
@@ -60,6 +63,7 @@ border_color = Color(0.945098, 0.764706, 0.196078, 1)
 corner_radius_top_left = 3
 corner_radius_bottom_right = 3
 corner_detail = 1
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y61vb"]
 content_margin_left = 5.0
@@ -70,6 +74,7 @@ bg_color = Color(0.945098, 0.764706, 0.196078, 1)
 corner_radius_top_right = 5
 corner_radius_bottom_left = 5
 corner_detail = 1
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5x3i2"]
 content_margin_left = 10.0
