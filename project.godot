@@ -17,11 +17,10 @@ config/features=PackedStringArray("4.4", "GL Compatibility")
 run/low_processor_mode=true
 boot_splash/bg_color=Color(0.945098, 0.764706, 0.196078, 1)
 boot_splash/image="uid://bwxgx025fxfdk"
-config/icon="res://icon.svg"
 
 [autoload]
 
-BundleManager="*res://bundles/manager.gd"
+BundleManager="*res://addons/bearware_tools/bundles/manager.gd"
 
 [debug]
 
@@ -29,8 +28,8 @@ file_logging/enable_file_logging=true
 
 [display]
 
-window/size/viewport_width=500
-window/size/viewport_height=700
+window/size/viewport_width=100
+window/size/viewport_height=100
 window/subwindows/embed_subwindows=false
 window/stretch/aspect="ignore"
 window/handheld/orientation=1
@@ -43,11 +42,6 @@ project/assembly_name="New Game Project"
 [editor_plugins]
 
 enabled=PackedStringArray()
-
-[gui]
-
-theme/custom="uid://cxq38wk7w6ors"
-theme/custom_font="uid://c32bf262cfbad"
 
 [physics]
 

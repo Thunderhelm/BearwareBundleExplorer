@@ -5,10 +5,11 @@ const OPT_FILE_EXT: String = ".json"
 
 
 var bundle_paths: Array[String] = [
-	"res://built-ins/",
+	"res://addons/bearware_tools/bundles/built-ins/",
 	"user://bundles/"
 ]
-var unique_name_map: Dictionary[String, BundleNode] = {}
+var bundle_map: Dictionary[String, BundleNode] = {}
+var bundle_files: Dictionary[BundleRoot, String] = {}
 
 
 
@@ -41,8 +42,9 @@ func load_bundle_from_file(path: String) -> void:
 		return
 	var bundle_root: BundleRoot = BundleRoot.new()
 	bundle_root.from_file(path)
-	if bundle_root.unique_name in unique_name_map.keys():
+	if bundle_root.unique_name in bundle_map.keys():
 		bundle_root.queue_free()
 	else:
+		bundle_files[bundle_root] = path
+		bundle_root.name = bundle_root.unique_name
 		add_child(bundle_root)
-		unique_name_map[bundle_root.unique_name] = bundle_root

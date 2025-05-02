@@ -1,7 +1,0 @@
-{
-		"title": "Built-In",
-		"author": "Bearware",
-		"description": "This is an unusable, unmodifiable, placeholder when no other bundle is present.",
-		"version": "1.0",
-		"unique_name": "bearware.built-in.empty_bundle"
-}

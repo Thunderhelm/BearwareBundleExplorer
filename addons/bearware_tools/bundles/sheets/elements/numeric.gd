@@ -9,6 +9,8 @@ var default: float = 1
 
 
 func from_dict(dict: Dictionary) -> void:
+	display_name = dict.get("display_name", "")
+	unique_name = dict.get("unique_name", "")
 	max = dict.get("max", 10)
 	min = dict.get("min", 1)
 	increment = dict.get("increment", 1)
@@ -17,6 +19,9 @@ func from_dict(dict: Dictionary) -> void:
 
 func to_dict() -> Dictionary:
 	return {
+		"element": "numeric",
+		"display_name": display_name,
+		"unique_name": unique_name,
 		"max": max,
 		"min": min,
 		"increment": increment,

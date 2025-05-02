@@ -1,0 +1,75 @@
+{
+		"title": "Built-In",
+		"author": "Bearware",
+		"description": "This is an unusable, unmodifiable, placeholder when no other bundle is present.",
+		"version": "1.0",
+		"unique_name": "bearware->built-in->core->empty_bundle->0e",
+		"sheets": [
+			{
+				"unique_name": "blank"
+			},
+			{
+				"unique_name": "all-elements",
+				"elements": [
+					{
+						"element": "numeric",
+						"display_name": "Basic Numeric",
+						"unique_name": "basic-numeric",
+						"max": 20,
+						"min": -10,
+						"increment": 2,
+						"default": -4
+					},
+					{
+						"element": "text",
+						"display_name": "Basic Text",
+						"unique_name": "basic-text",
+						"default": "text here"
+					},
+					{
+						"element": "sheet_reference",
+						"display_name": "Sheet Ref",
+						"unique_name": "sheet-ref",
+						"sheet_un": "bearware->built-in->core->empty_bundle->0e->sheets->blank"
+					},
+					{
+						"element": "set",
+						"display_name": "Set",
+						"unique_name": "set",
+						"max_selectable": 1,
+						"min_selectable": 0,
+						"default_selected": 0,
+						"set_elements": [
+							{
+								"element": "numeric",
+								"display_name": "Set Numeric 1",
+								"unique_name": "set-num-1",
+								"max": 1,
+								"min": 1,
+								"increment": 0,
+								"default": 1
+							},
+							{
+								"element": "numeric",
+								"display_name": "Set Numeric 2",
+								"unique_name": "set-num-2",
+								"max": 2,
+								"min": 2,
+								"increment": 0,
+								"default": 2
+							},
+							{
+								"element": "numeric",
+								"display_name": "Set Numeric 3",
+								"unique_name": "set-num-3",
+								"max": 3,
+								"min": 3,
+								"increment": 0,
+								"default": 3
+							},
+						]
+					}
+				]
+			}
+		]
+}
