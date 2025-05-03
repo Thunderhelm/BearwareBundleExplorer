@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0ei8mni4m2fg"]
+[gd_scene load_steps=7 format=3 uid="uid://d0ei8mni4m2fg"]
 
 [ext_resource type="Theme" uid="uid://cxq38wk7w6ors" path="res://addons/bearware_tools/bundle-explorer/assets/theme.tres" id="1_73di2"]
+[ext_resource type="Script" uid="uid://cood22qhxmy5n" path="res://addons/bearware_tools/bundle-explorer/windows/sheet/sheet.gd" id="2_68b5o"]
+[ext_resource type="Theme" uid="uid://bgxvnpdkfpiwh" path="res://addons/bearware_tools/bundle-explorer/assets/sub_label.tres" id="2_r3flh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3flh"]
 content_margin_left = 3.0
@@ -37,6 +39,7 @@ anti_aliasing = false
 [node name="Sheet" type="Button"]
 theme = ExtResource("1_73di2")
 text = "Could not get sheet name"
+script = ExtResource("2_68b5o")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -52,7 +55,7 @@ vertical_alignment = 2
 position = Vector2i(150, 36)
 size = Vector2i(300, 700)
 
-[node name="MarginContainer" type="MarginContainer" parent="Window"]
+[node name="Border" type="MarginContainer" parent="Window"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -63,19 +66,28 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Window/MarginContainer"]
+[node name="Elements" type="VBoxContainer" parent="Window/Border"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Window/MarginContainer/VBoxContainer"]
+[node name="Name" type="HBoxContainer" parent="Window/Border/Elements"]
 layout_mode = 2
 theme_override_constants/separation = 3
 
-[node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Window/Border/Elements/Name"]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_68b5o")
 text = "SHEET:"
 
-[node name="Label2" type="Label" parent="Window/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Value" type="Label" parent="Window/Border/Elements/Name"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_qqv5q")
+text = "Failed to find display name"
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="UN" type="Label" parent="Window/Border/Elements"]
+layout_mode = 2
+theme = ExtResource("2_r3flh")
+text = "Failed to find Unique Name (UN)"
+autowrap_mode = 2

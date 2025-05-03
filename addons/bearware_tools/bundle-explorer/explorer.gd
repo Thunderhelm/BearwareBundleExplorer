@@ -4,6 +4,7 @@ extends Window
 @onready var bundle_title: Label = $Scroll/List/BundleTitle
 @onready var bundle_author: Label = $Scroll/List/BundleAuthor
 @onready var bundle_description: Label = $Scroll/List/BundleDescription
+@onready var bundle_sheets: VBoxContainer = $Scroll/List/Sheets
 
 @onready var all_uns_button: Button = $Scroll/List/Details/AllUNs
 @onready var all_uns_window: Window = $Scroll/List/Details/AllUNs/Window
@@ -30,6 +31,11 @@ func _change_to_bundle(index: int) -> void:
 	bundle_title.text = bundle.title
 	bundle_author.text = bundle.author
 	bundle_description.text = bundle.description
+	bundle_sheets.get_children().map(bundle_sheets.remove_child)
+	for sheet in bundle.get_sheets():
+		var sheet_display: Button = preload("uid://d0ei8mni4m2fg").instantiate()
+		bundle_sheets.add_child(sheet_display)
+		sheet_display.sheet = sheet
 
 
 func _process(_delta: float) -> void:

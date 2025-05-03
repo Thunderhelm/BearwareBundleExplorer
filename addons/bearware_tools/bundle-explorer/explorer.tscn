@@ -76,6 +76,9 @@ autowrap_mode = 2
 layout_mode = 2
 autowrap_mode = 2
 
+[node name="Sheets" type="VBoxContainer" parent="Scroll/List"]
+layout_mode = 2
+
 [connection signal="close_requested" from="." to="." method="hide"]
 [connection signal="visibility_changed" from="." to="." method="_visibility_changed"]
 [connection signal="toggled" from="Scroll/List/Details/AllUNs" to="Scroll/List/Details/AllUNs/Window" method="set_visible"]

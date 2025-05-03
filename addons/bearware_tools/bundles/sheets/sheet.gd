@@ -16,12 +16,14 @@ func get_elements() -> Array[BundleElementNode]:
 
 func to_dict() -> Dictionary:
 	return {
+		"display_name": display_name,
 		"unique_name": unique_name,
 		"elements": elements_to_dict()
 	}
 
 
 func from_dict(dict: Dictionary) -> void:
+	display_name = dict.get("display_name", "")
 	unique_name = dict.get("unique_name", "")
 	dict.get("elements", []).map(_add_elem_from_dict)
 

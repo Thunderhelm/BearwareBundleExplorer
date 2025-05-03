@@ -6,9 +6,11 @@
 		"unique_name": "bearware->built-in->core->empty_bundle->0e",
 		"sheets": [
 			{
+				"display_name": "Blank Sheet",
 				"unique_name": "blank"
 			},
 			{
+				"display_name": "Sheet with All Elements",
 				"unique_name": "all-elements",
 				"elements": [
 					{

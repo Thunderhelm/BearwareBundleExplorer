@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1q3afxsxa73h"]
+
+[ext_resource type="Script" uid="uid://rvx7faugsydu" path="res://addons/bearware_tools/bundle-explorer/windows/sheet/elements/numeric.gd" id="1_2cf1u"]
+[ext_resource type="Theme" uid="uid://cxq38wk7w6ors" path="res://addons/bearware_tools/bundle-explorer/assets/theme.tres" id="1_24rtf"]
+[ext_resource type="Theme" uid="uid://bgxvnpdkfpiwh" path="res://addons/bearware_tools/bundle-explorer/assets/sub_label.tres" id="3_6yp5i"]
+
+[node name="Numeric" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_24rtf")
+script = ExtResource("1_2cf1u")
+
+[node name="Details" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Type" type="Label" parent="Details"]
+layout_mode = 2
+theme = ExtResource("3_6yp5i")
+text = "Numeric"
+
+[node name="DisplayName" type="Label" parent="Details"]
+layout_mode = 2
+
+[node name="UniqueName" type="Label" parent="Details"]
+layout_mode = 2
+
+[node name="Max" type="HBoxContainer" parent="Details"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Details/Max"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Max"
+
+[node name="Value" type="SpinBox" parent="Details/Max"]
+layout_mode = 2
+
+[node name="Min" type="HBoxContainer" parent="Details"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Details/Min"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Min"
+
+[node name="Value" type="SpinBox" parent="Details/Min"]
+layout_mode = 2
+
+[node name="Increment" type="HBoxContainer" parent="Details"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Details/Increment"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Increment"
+
+[node name="Value" type="SpinBox" parent="Details/Increment"]
+layout_mode = 2
+
+[node name="Default" type="HBoxContainer" parent="Details"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Details/Default"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Default"
+
+[node name="Value" type="SpinBox" parent="Details/Default"]
+layout_mode = 2

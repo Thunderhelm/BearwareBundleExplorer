@@ -10,6 +10,14 @@ extends BundleNode
 
 
 
+func get_sheets() -> Array[BundleSheet]:
+	var sheets: Array[BundleSheet] = []
+	for child in get_children():
+		if child is BundleSheet:
+			sheets.append(child)
+	return sheets
+
+
 func _ready() -> void:
 	if self not in BundleManager.bundle_files:
 		return
