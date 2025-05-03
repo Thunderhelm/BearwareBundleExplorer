@@ -6,7 +6,7 @@ extends Button
 var sheet: BundleSheet:
 	set(val):
 		sheet = val
-		text = sheet.display_name
+		text = "      " + sheet.display_name
 		$Window/Border/Elements/Name/Value.text = sheet.display_name
 		$Window/Border/Elements/UN.text = sheet.unique_name
 		sheet.get_elements().map(_add_element)
