@@ -47,4 +47,4 @@ func _visibility_changed() -> void:
 	if not visible:
 		all_uns_window.hide()
 	if visible and all_uns_button.button_pressed:
-		all_uns_window.show()	
+		all_uns_window.show()

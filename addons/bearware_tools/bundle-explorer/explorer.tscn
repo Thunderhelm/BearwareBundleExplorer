@@ -12,6 +12,7 @@ border_width_bottom = 10
 border_color = Color(0.8, 0.8, 0.8, 0)
 
 [node name="Explorer" type="Window"]
+initial_position = 2
 size = Vector2i(500, 700)
 visible = false
 script = ExtResource("1_7cl0m")
@@ -42,7 +43,7 @@ toggle_mode = true
 text = "All UNs"
 
 [node name="Window" type="Window" parent="Scroll/List/Details/AllUNs"]
-position = Vector2i(550, 200)
+initial_position = 2
 size = Vector2i(400, 500)
 visible = false
 force_native = true
