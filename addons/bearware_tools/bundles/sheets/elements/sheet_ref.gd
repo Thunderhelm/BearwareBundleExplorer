@@ -2,13 +2,21 @@ class_name BundleElementSheetRef
 extends BundleElementNode
 
 var _sheet_ref: String
-var sheet: BundleNode:
+var sheet_node: BundleNode:
 	get:
-		var node: BundleNode = BundleManager.bundle_map[_sheet_ref]
+		var node: BundleNode = BundleManager.bundle_map.get(_sheet_ref, null)
 		if node:
 			return BundleManager.bundle_map[_sheet_ref]
 		return
 	set(val):
+		if not (
+			val is BundleElementNumeric or
+			val is BundleElementSet or 
+			val is BundleSheet or
+			val is BundleElementText
+		):
+			_sheet_ref = ""
+			return
 		var ref: String = BundleManager.bundle_map.find_key(val)
 		if ref.split("->").size() < 5:
 			_sheet_ref = ""

@@ -38,7 +38,7 @@ func _register_element(prefix: String, node: Node):
 
 
 func register_uns(root_un: String):
-	var full_un: String = root_un + "->Sheets->" + unique_name
+	var full_un: String = root_un + "->sheets->" + unique_name
 	BundleManager.bundle_map[full_un] = self
 	for child in get_children():
 		_register_element(full_un, child)
