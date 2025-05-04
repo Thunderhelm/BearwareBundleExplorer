@@ -4,6 +4,7 @@ extends BundleElementNode
 var max_selectable: int = 1
 var min_selectable: int = 0
 var default_selected: int = 0
+var lock_elements: bool = false
 
 
 
@@ -21,6 +22,7 @@ func from_dict(dict: Dictionary) -> void:
 	max_selectable = dict.get("max_selectable", 1)
 	min_selectable = dict.get("min_selectable", 0)
 	default_selected = dict.get("default_selected", 0)
+	lock_elements = dict.get("lock_elements", false)
 	dict.get("set_elements", []).map(_add_elem_from_dict)
 
 
@@ -32,6 +34,7 @@ func to_dict() -> Dictionary:
 		"max_selectable": max_selectable,
 		"min_selectable": min_selectable,
 		"default_selected": default_selected,
+		"lock_elements": lock_elements,
 		"set_elements": get_elements().map(_get_as_dict)
 	}
 

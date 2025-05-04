@@ -3,7 +3,7 @@
 		"author": "Bearware",
 		"description": "This is an unusable, unmodifiable, placeholder when no other bundle is present.",
 		"version": "1.0",
-		"unique_name": "bearware->built-in->core->empty_bundle->0e",
+		"unique_name": "bearware->built-in->core->empty-bundle->0e",
 		"sheets": [
 			{
 				"display_name": "Blank Sheet",
@@ -32,7 +32,7 @@
 						"element": "sheet_reference",
 						"display_name": "Sheet Ref",
 						"unique_name": "sheet-ref",
-						"sheet_un": "bearware->built-in->core->empty_bundle->0e->sheets->blank"
+						"sheet_un": "bearware->built-in->core->empty-bundle->0e->sheets->blank"
 					},
 					{
 						"element": "set",
@@ -41,6 +41,7 @@
 						"max_selectable": 1,
 						"min_selectable": 0,
 						"default_selected": 0,
+						"lock_elements": true,
 						"set_elements": [
 							{
 								"element": "numeric",
