@@ -69,8 +69,86 @@
 								"min": 3,
 								"increment": 0,
 								"default": 3
-							},
+							}
 						]
+					}
+				]
+			},
+			{
+				"display_name": "Very Numeric Sheet",
+				"unique_name": "very-numeric-sheet",
+				"elements": [
+					{
+						"element": "numeric",
+						"display_name": "Simple Numeric",
+						"unique_name": "simple-numeric",
+						"max": 100,
+						"min": -100,
+						"increment": 1,
+						"default": 0
+					},
+					{
+						"element": "numeric",
+						"display_name": "Stepped Numeric",
+						"unique_name": "stepped-numeric",
+						"max": 100,
+						"min": -100,
+						"increment": 10,
+						"default": 0
+					},
+					{
+						"element": "numeric",
+						"display_name": "Misaligned Numeric",
+						"unique_name": "misaligned-numeric",
+						"max": 100,
+						"min": -100,
+						"increment": 15,
+						"default": 2
+					},
+					{
+						"element": "numeric",
+						"display_name": "Misbounded Numeric",
+						"unique_name": "misbounded-numeric",
+						"max": -100,
+						"min": 100,
+						"increment": 1,
+						"default": 0
+					},
+					{
+						"element": "numeric",
+						"display_name": "Misdefaulted Numeric",
+						"unique_name": "misdefaulted-numeric",
+						"max": 100,
+						"min": -100,
+						"increment": 10,
+						"default": 150
+					},
+					{
+						"element": "numeric",
+						"display_name": "Locked Numeric",
+						"unique_name": "locked-numeric",
+						"max": 2,
+						"min": 2,
+						"increment": 0,
+						"default": 2
+					},
+					{
+						"element": "numeric",
+						"display_name": "Auto Max Numeric",
+						"unique_name": "auto-max-numeric",
+						"max": 100,
+						"min": -100,
+						"increment": 10,
+						"default": 0
+					},
+					{
+						"element": "numeric",
+						"display_name": "Auto Min Numeric",
+						"unique_name": "auto-min-numeric",
+						"max": 100,
+						"min": -100,
+						"increment": 10,
+						"default": 0
 					}
 				]
 			}
