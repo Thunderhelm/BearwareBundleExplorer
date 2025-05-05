@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Bearware Bundle Explorer"
 config/version="0.1"
-run/main_scene="uid://hvg3s5w7ybvu"
+run/main_scene="uid://cqxnymvwurxrq"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 run/low_processor_mode=true
 boot_splash/bg_color=Color(0.945098, 0.764706, 0.196078, 1)
@@ -21,6 +21,7 @@ boot_splash/image="uid://bwxgx025fxfdk"
 [autoload]
 
 BundleManager="*res://addons/bearware_tools/bundles/manager.gd"
+BundleExplorer="*res://addons/bearware_tools/bundle-explorer/explorer.tscn"
 
 [debug]
 
