@@ -1,10 +1,31 @@
 class_name BundleElementSet
 extends BundleElementNode
 
-var max_selectable: int = 1
-var min_selectable: int = 0
-var default_selected: int = 0
-var lock_elements: bool = false
+signal max_selectable_changed(value: int)
+signal min_selectable_changed(value: int)
+signal default_selected_changed(value: int)
+signal lock_elements_changed(value: bool)
+
+var max_selectable: int = 1:
+	set(val):
+		max_selectable = val
+		max_selectable_changed.emit(val)
+		element_changed.emit()
+var min_selectable: int = 0:
+	set(val):
+		min_selectable = val
+		min_selectable_changed.emit(val)
+		element_changed.emit()
+var default_selected: int = 0:
+	set(val):
+		default_selected = val
+		default_selected_changed.emit(val)
+		element_changed.emit()
+var lock_elements: bool = false:
+	set(val):
+		lock_elements = val
+		lock_elements_changed.emit(val)
+		element_changed.emit()
 
 
 func get_elements() -> Array[BundleElementNode]:

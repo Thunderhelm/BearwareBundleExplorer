@@ -1,7 +1,14 @@
 class_name BundleElementNode
 extends BundleNode
 
-@export var placeholder_text: String = ""
+signal element_changed()
+signal placeholder_text_changed(value: String)
+
+@export var placeholder_text: String = "":
+	set(val):
+		placeholder_text = val
+		placeholder_text_changed.emit(val)
+		element_changed.emit()
 
 
 static func element_from_type_str(element_type: String) -> BundleElementNode:

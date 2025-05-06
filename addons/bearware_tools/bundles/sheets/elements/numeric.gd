@@ -1,10 +1,31 @@
 class_name BundleElementNumeric
 extends BundleElementNode
 
-var max: float = 10
-var min: float = 1
-var increment: float = 1
-var default: float = 1
+signal max_changed(val: float)
+signal min_changed(val: float)
+signal increment_changed(val: float)
+signal default_changed(val: float)
+
+var max: float = 10:
+	set(val):
+		max = val
+		max_changed.emit(val)
+		element_changed.emit()
+var min: float = 1:
+	set(val):
+		min = val
+		min_changed.emit(val)
+		element_changed.emit()
+var increment: float = 1:
+	set(val):
+		increment = val
+		increment_changed.emit(val)
+		element_changed.emit()
+var default: float = 1:
+	set(val):
+		default = val
+		default_changed.emit(val)
+		element_changed.emit()
 
 
 
