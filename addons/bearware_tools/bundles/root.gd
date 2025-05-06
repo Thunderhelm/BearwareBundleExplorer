@@ -1,13 +1,17 @@
 class_name BundleRoot
 extends BundleNode
 
+
 @export var title: String = ""
 @export var author: String = ""
 @export var description: String = ""
 @export var version: String = ""
-#author->setting(series or world)->style(core, addendum, brew)->system-name->edition
-@export var unique_name: String = "bearware->built-in->core->empty_bundle->0e"
+@export var file_path: String
 
+
+func _ready() -> void:
+	if file_path:
+		_load_bundle()
 
 
 func get_sheets() -> Array[BundleSheet]:
@@ -18,18 +22,22 @@ func get_sheets() -> Array[BundleSheet]:
 	return sheets
 
 
-func _ready() -> void:
-	if self not in BundleManager.bundle_files:
-		return
-	_load_bundle(BundleManager.bundle_files[self])
+func get_tokens() -> void:
+	return
 
 
-func _load_bundle(path: String) -> void:
-	var file: FileAccess = FileAccess.open(path, FileAccess.READ)
+func get_runes() -> void:
+	return
+
+
+func _load_bundle() -> void:
+	if not FileAccess.file_exists(file_path):
+		log_error("Could not finish loading bundle: File does not exist")
+	var file := FileAccess.open(file_path, FileAccess.READ)
 	var content: String = file.get_as_text()
 	file.close()
 	var data: Dictionary = JSON.parse_string(content)
-	if typeof(data.get("sheets", [])) == TYPE_ARRAY:
+	if data.get("sheets", []) is Array:
 		var sheets: Array = data.get("sheets", [])
 		_load_sheets(sheets)
 	return
@@ -37,11 +45,13 @@ func _load_bundle(path: String) -> void:
 
 func _load_sheets(sheets: Array) -> void:
 	for sheet in sheets:
-		if typeof(sheet) != TYPE_DICTIONARY:
+		if sheet is not Dictionary:
+			log_warning("Unknown data found in sheet list, skipping")
 			continue
 		var sheet_node: BundleSheet = BundleSheet.new()
 		sheet_node.from_dict(sheet)
-		if sheet_node.unique_name == "":
+		var status: BundleManager.ERR = BundleManager.register_node(sheet_node)
+		if status != BundleManager.ERR.OK:
 			sheet_node.queue_free()
 			continue
 		else:
@@ -59,13 +69,13 @@ func _load_runes(runes: Array[Dictionary]) -> void:
 	return
 
 
-func from_dict(dict: Dictionary) -> void:
+func from_dict(dict: Dictionary) -> ERR:
 	title = dict.get("title", "")
 	author = dict.get("author", "")
 	description = dict.get("description", "")
 	version = dict.get("version", "")
 	unique_name = dict.get("unique_name", "bearware.built-in.empty_bundle")
-	return
+	return ERR.OK
 
 
 func to_dict() -> Dictionary:
