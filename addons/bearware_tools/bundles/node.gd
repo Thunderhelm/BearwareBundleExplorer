@@ -8,6 +8,8 @@ enum ERR {
 	FILE_DOESNT_EXIST,
 	INVALID_REFERENCE,
 	CANNOT_FIND_UNIQUE_NAME,
+	ABSTRACT_IMPLEMENTATION,
+	INCOMPATIBLE_ELEMENT,
 }
 
 # Goal is to be unique to every node as a reference that can be used by
