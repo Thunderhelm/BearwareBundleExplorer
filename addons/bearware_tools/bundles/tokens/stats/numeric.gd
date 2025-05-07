@@ -1,0 +1,4 @@
+class_name BundleStatNumeric
+extends BundleStatNode
+
+var _source_numeric: BundleElementNumeric

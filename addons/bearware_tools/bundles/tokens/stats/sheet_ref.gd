@@ -1,0 +1,4 @@
+class_name BundleStatSheetRef
+extends BundleStatNode
+
+var _source_sheet_ref: BundleElementSheetRef
