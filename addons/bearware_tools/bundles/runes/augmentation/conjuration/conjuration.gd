@@ -1,0 +1,2 @@
+class_name BundleRuneConjuration
+extends BundleRuneAugmentation
